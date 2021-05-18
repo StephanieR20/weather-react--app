@@ -52,11 +52,11 @@ export default function Weather() {
                 {weatherData.temperature}
               </span>
               <span className="weather-deg">
-                <a href="#" id="fahrenheit-link" class="active">
+                <a href="/" id="fahrenheit-link" class="active">
                   °F
                 </a>{" "}
                 |
-                <a href="#" id="celsius-link" class="active">
+                <a href="/" id="celsius-link" class="active">
                   °C
                 </a>
               </span>
