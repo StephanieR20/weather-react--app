@@ -17,14 +17,14 @@ ul {
   padding: 0 auto;
   margin: 0 auto;
   list-style: none;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
 }
 .container-wrap {
   max-width: 600px;
   border-radius: 25px;
   margin: 60px auto;
   padding: 15px;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
   height: 600px;
   align-items: center;
 }
@@ -54,34 +54,34 @@ ul {
   top: 20%;
   right: 20%;
   font-size: 40px;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
 }
 
 .Date {
   top: 10px;
   left: 10px;
   font-size: 20px;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
 }
 .Hour {
   margin-top: 0;
   font: bold;
   font-weight: 10px;
   font-size: 18px;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
 }
 
 .location {
   text-align: center;
   margin-top: 10px;
   font-size: 30px;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
 }
 
 .weather-des {
   font-size: 20px;
   margin: 0;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
 }
 .weather-deg {
   position: relative;
@@ -109,13 +109,13 @@ ul {
   margin: 0;
   font-weight: 250;
   font-size: 80px;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
 }
 
 .search-form {
   text-align: left;
   border: none;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
   background: none;
   outline: none;
   padding: 0 auto;
@@ -125,7 +125,7 @@ ul {
   transition: 0.4s;
   line-height: 20px;
   width: 150px;
-  height: 50%;
+  height: 30%;
 }
 .search-loop {
   position: absolute;
@@ -137,7 +137,7 @@ ul {
   width: 30px;
   height: 30px;
   border-radius: 45%;
-  background: rgb(179, 179, 179);
+  background: rgb(102, 102, 102);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,7 +148,7 @@ ul {
   margin: 5px;
   transition: 00.3s;
   background: none;
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
   cursor: pointer;
 }
 .link-code {
@@ -158,11 +158,11 @@ ul {
   color: black;
 }
 .weather-icon {
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
 }
 
 .weather-deg .active {
-  color: rgb(179, 179, 179);
+  color: rgb(102, 102, 102);
   cursor: default;
 }
 
@@ -173,7 +173,7 @@ ul {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  color: rgb(141, 138, 138);
+  color: rgb(102, 102, 102);
 }
 .weather-forecast-date {
   font-size: 16px;
