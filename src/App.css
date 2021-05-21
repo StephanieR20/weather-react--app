@@ -13,18 +13,19 @@ body {
 
 ul {
   position: relative;
-  left: 50%;
+  left: 70%;
+  top: 20%;
   padding: 0 auto;
   margin: 0 auto;
   list-style: none;
-  color: rgb(102, 102, 102);
+  color: rgb(184, 172, 83);
 }
 .container-wrap {
   max-width: 600px;
   border-radius: 25px;
   margin: 60px auto;
   padding: 15px;
-  color: rgb(102, 102, 102);
+  color: rgb(211, 201, 122);
   height: 600px;
   align-items: center;
 }
@@ -33,7 +34,8 @@ ul {
   height: 100%;
   border-radius: 25px;
   background-image: url(./images/sunnyday.jpg);
-  width: 550px;
+  width: 600px;
+  align-items: center;
 }
 
 .weather-gradient {
@@ -54,41 +56,44 @@ ul {
   top: 20%;
   right: 20%;
   font-size: 40px;
-  color: rgb(102, 102, 102);
+  color: rgb(211, 201, 122);
 }
 
 .Date {
   top: 10px;
   left: 10px;
   font-size: 20px;
-  color: rgb(102, 102, 102);
+  color: rgb(211, 201, 122);
 }
 .Hour {
   margin-top: 0;
   font: bold;
   font-weight: 10px;
   font-size: 18px;
-  color: rgb(102, 102, 102);
+  color: rgb(211, 201, 122);
 }
 
 .location {
   text-align: center;
   margin-top: 10px;
+  padding-bottom: 0 auto;
   font-size: 30px;
-  color: rgb(102, 102, 102);
+  color: rgb(211, 201, 122);
 }
 
 .weather-des {
   font-size: 20px;
-  margin: 0;
-  color: rgb(102, 102, 102);
+  margin: 0 auto;
+  padding: 0 auto;
+  color: rgb(211, 201, 122);
 }
 .weather-deg {
   position: relative;
-  top: -35px;
+  top: 30px;
   margin: 0;
   font-size: 25px;
   font-weight: 10px;
+  color: rgb(218, 207, 132);
 }
 
 .city-name {
@@ -96,48 +101,50 @@ ul {
   top: 9%;
   right: -16%;
   transform: translate(-60%, -60%);
-  height: 38px;
-  padding: 10px;
-  margin-top: 10px;
+  height: 25px;
+  padding: 8px;
+  margin-top: 8px;
   border-radius: 40px;
   border-style: double;
-  color: white;
+  color: rgb(211, 201, 122);
 }
 
 .weather-temp {
+  position: relative;
+  top: 40px;
+  margin-top: 10%;
   padding: 0;
-  margin: 0;
-  font-weight: 250;
+  font-weight: 250px;
   font-size: 80px;
-  color: rgb(102, 102, 102);
+  color: rgb(236, 224, 129);
 }
 
 .search-form {
   text-align: left;
   border: none;
-  color: rgb(102, 102, 102);
+  color: rgb(211, 201, 122);
   background: none;
   outline: none;
-  padding: 0 auto;
-  margin: 0 auto;
+  padding: 5px 25px 5px 5px;
+  margin: 5px 25px 5px 5px;
   font-weight: 17px;
   font-size: 17px;
   transition: 0.4s;
   line-height: 20px;
-  width: 150px;
-  height: 30%;
+  width: 100px;
+  height: 25%;
 }
 .search-loop {
   position: absolute;
   color: white;
-  top: 2%;
+  top: 7%;
   right: 1.01%;
   margin: 0;
   padding: 0;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 45%;
-  background: rgb(102, 102, 102);
+  background: rgb(211, 201, 122);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,9 +153,9 @@ ul {
   width: 150px;
   padding: 5px;
   margin: 5px;
-  transition: 00.3s;
+  transition: 00.4s;
   background: none;
-  color: rgb(102, 102, 102);
+  color: rgb(211, 201, 122);
   cursor: pointer;
 }
 .link-code {
@@ -158,11 +165,11 @@ ul {
   color: black;
 }
 .weather-icon {
-  color: rgb(102, 102, 102);
+  color: rgb(236, 224, 129);
 }
 
 .weather-deg .active {
-  color: rgb(102, 102, 102);
+  color: rgb(236, 224, 129);
   cursor: default;
 }
 
@@ -173,7 +180,7 @@ ul {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  color: rgb(102, 102, 102);
+  color: rgb(211, 201, 122);
 }
 .weather-forecast-date {
   font-size: 16px;

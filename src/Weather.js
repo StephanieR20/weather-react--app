@@ -25,12 +25,12 @@ export default function Weather() {
             {weatherData.time}
           </p>
 
-          <div className="col-6">
+          <div className="col-4">
             <form className="city-name" id="search-form">
               <input
                 type="text"
                 name="city"
-                placeholder="Enter City"
+                placeholder="Enter city"
                 autofocus="on"
                 className="search-form"
                 id="search-text-input"
@@ -87,7 +87,7 @@ export default function Weather() {
         >
           Open-Source Code{" "}
         </a>
-        , <strong> Stephanie Rubio </strong>
+       by <strong> Stephanie Rubio </strong>
       </small>
     </div>
   );
