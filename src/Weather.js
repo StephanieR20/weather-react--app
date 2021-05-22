@@ -73,10 +73,27 @@ export default function Weather() {
                       Wind: <span id="wind">{weatherData.wind}</span> km/h
                     </li>
                   </ul>
-                  <div className="weather-forecast" id="forecast"></div>
+                  <div className="weather-forecast" id="forecast">
+                    <div className="row">
+                      <div className="col-6">
+              <div class="weather-forecast-date">
+                Tuesday
                 </div>
-              </div>
+         <img src="https://openweathermap.org/weather-conditions" alt="unknown.png"/>
+         <div className="weather-forecast-temperature">
+          <span className="weather-forecast-temperature-max">
+              <storng>18°</storng>
+          </span>
+        <span className="weather-forecast-temperature-min">
+                12°
+        </span>     
+           </div>
+           </div>
             </div>
+            </div>
+            </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>

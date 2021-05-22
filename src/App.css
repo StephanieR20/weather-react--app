@@ -7,7 +7,7 @@ body {
   display: flex;
   background-repeat: repeat;
   background-position: center;
-  background-size: 900%;
+  background-size: 1000%;
   align-items: center;
 }
 
@@ -26,7 +26,7 @@ ul {
   margin: 60px auto;
   padding: 15px;
   color: rgb(211, 201, 122);
-  height: 600px;
+  height: 650px;
   align-items: center;
 }
 .weather-side {
@@ -34,7 +34,7 @@ ul {
   height: 100%;
   border-radius: 25px;
   background-image: url(./images/sunnyday.jpg);
-  width: 600px;
+  width: 650px;
   align-items: center;
 }
 
