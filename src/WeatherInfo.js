@@ -22,18 +22,7 @@ export default function WeatherInfo(props){
               <span className="weather-temp" id="temperature">
                 <WeatherTemperature celsius={props.data.temperature}/>
               </span>
-              <span className="weather-deg">
-                <a href="/" id="fahrenheit-link" class="active">
-                  °F
-                </a>{" "}
-                |
-                <a href="/" id="celsius-link" class="active">
-                  °C
-                </a>
-              </span>
-              <span className="weather-deg"></span>
-
-              <div className="row">
+             <div className="row">
                 <div className="col-m-6">
                   <ul class="percentage-speed">
                     <li>
