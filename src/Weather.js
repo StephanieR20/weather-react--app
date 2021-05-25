@@ -41,7 +41,7 @@ export default function Weather(props) {
     
      function search(){
   const apiKey= "e63c22e6b2d05b10dc5b93e36740e210";
-  let apiUrl= `http://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}&untis=metrics`;
+  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}&untis=metrics`;
   axios.get(apiUrl).then(handleResponse);
 
      }
@@ -67,7 +67,7 @@ return (
               </button>
             </form>
         < WeatherInfo data={weatherData}/>
-        <WeatherForecast coordinates={weatherData.coordinates} />
+        < WeatherForecast coordinates={weatherData.coordinates} />
            </div>
            </div>
            </div>
