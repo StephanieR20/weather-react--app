@@ -1,32 +1,58 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
+
+
+
 import "./App.css";
 
-export default function Weather() {
-  let weatherData = {
-    city: "Washington DC",
-    temperature: 13,
-    date: "Monday ",
-    time: "10:30",
-    description: "Clear",
-    img: "src/icons/01d.png",
-    humidity: 57,
-    wind: 5
-  };
-  return (
+
+
+export default function Weather(props) {
+  
+  const [weatherData, setWeatherData] = useState({ready: false});
+   const [city, setCity] = useState(props.defaultCity);
+  
+   function handleResponse(response){
+      setWeatherData({
+      ready: true,
+      coordinates: response.data.coord,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
+      description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+    });
+  }
+
+     function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+
+     function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+    
+     function search(){
+  const apiKey= "e63c22e6b2d05b10dc5b93e36740e210";
+  let apiUrl= `http://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}&untis=metrics`;
+  axios.get(apiUrl).then(handleResponse);
+
+     }
+
+ if (weatherData.ready){
+return (
     <div className="Weather">
       <div className="weather-side">
         <div className="weather-gradient"></div>
-
-        <div className="date-container">
-          <h1 className="Day" id="date">
-            {weatherData.date}
-          </h1>
-          <p className="Hour" id="time">
-            {weatherData.time}
-          </p>
-
-          <div className="col-4">
-            <form className="city-name" id="search-form">
+        <div className="col-4">
+            <form className="city-name" id="search-form" onSubmit={handleSubmit}>
               <input
                 type="text"
                 name="city"
@@ -34,80 +60,22 @@ export default function Weather() {
                 autofocus="on"
                 className="search-form"
                 id="search-text-input"
+                onChange={handleCityChange}
               />
-              <button className="search-loop">
+            <button className="search-loop">
                 <i className="fas fa-search"></i>
               </button>
             </form>
-            <div className="weather-icon">
-              <img src={weatherData.img} alt="" id="icon" />
-
-              <span className="location" id="city">
-                {weatherData.city}
-              </span>
-              <h2 className="weather-des" id="description">
-                {weatherData.description}
-              </h2>
-              <span className="weather-temp" id="temperature">
-                {weatherData.temperature}
-              </span>
-              <span className="weather-deg">
-                <a href="/" id="fahrenheit-link" class="active">
-                  °F
-                </a>{" "}
-                |
-                <a href="/" id="celsius-link" class="active">
-                  °C
-                </a>
-              </span>
-              <span className="weather-deg"></span>
-
-              <div className="row">
-                <div className="col-m-6">
-                  <ul class="percentage-speed">
-                    <li>
-                      Humidity:{" "}
-                      <span id="humidity">{weatherData.humidity}</span>%
-                    </li>
-                    <li>
-                      Wind: <span id="wind">{weatherData.wind}</span> km/h
-                    </li>
-                  </ul>
-                  <div className="weather-forecast" id="forecast">
-                    <div className="row">
-                      <div className="col-6">
-              <div class="weather-forecast-date">
-                Tuesday
-                </div>
-         <img src="https://openweathermap.org/weather-conditions" alt="unknown.png"/>
-         <div className="weather-forecast-temperature">
-          <span className="weather-forecast-temperature-max">
-              <storng>18°</storng>
-          </span>
-        <span className="weather-forecast-temperature-min">
-                12°
-        </span>     
+        < WeatherInfo data={weatherData}/>
+        <WeatherForecast coordinates={weatherData.coordinates} />
            </div>
            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-      <small className="link-code">
-        <a
-          href="https://github.com/StephanieR20/Weather-App.git"
-          target="-blank"
-        >
-          Open-Source Code{" "}
-        </a>
-       by <strong> Stephanie Rubio </strong>
-      </small>
-    </div>
-  );
+           </div>
+          
+          ); 
+  }else{
+   search();
+  return "Loading....";
+} 
+
 }
-
-
