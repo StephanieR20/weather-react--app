@@ -13,17 +13,16 @@ export default function WeatherInfo(props){
             < FormattedDate date={props.data.date}/>
           </h1>
           <p className="Hour" id="time">
-           < FormattedTime time= {props.data.time}/>
+          < FormattedTime time= {props.data.time}/>
           </p>
     <div className="weather-icon">
-      < WeatherIcon code={props.data.icon} size={52}/>
+      < WeatherIcon code={props.data.icon} size={80}/>
+      <br/>
        <span className="location" id="city">{props.data.city} </span>
        <h2 className="weather-des" id="description">{props.data.description}</h2>
-              <span className="weather-temp" id="temperature">
-                <WeatherTemperature celsius={props.data.temperature}/>
-              </span>
-             <div className="row">
-                <div className="col-m-6">
+              <span className="temperature" id="temperature" ><WeatherTemperature celsius={props.data.temperature} /> </span>
+             <div className="row row-cols-auto">
+                <div className="col-4">
                   <ul class="percentage-speed">
                     <li>
                       Humidity:{" "}

@@ -19,6 +19,7 @@ export default function Weather(props) {
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
+      time: new Date(response.data.dt * 1000),
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
@@ -40,7 +41,7 @@ export default function Weather(props) {
     
      function search(){
   const apiKey= "e63c22e6b2d05b10dc5b93e36740e210";
-  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}&units=metrics`;
+  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
 
      }
@@ -50,7 +51,8 @@ return (
     <div className="Weather">
       <div className="weather-side">
         <div className="weather-gradient"></div>
-        <div className="col-4">
+        <div className="row row-cols-auto" ></div>
+        <div className="col">
             <form className="city-name" id="search-form" onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -64,13 +66,13 @@ return (
             <button className="search-loop">
                 <i className="fas fa-search"></i>
               </button>
-            </form>
-        < WeatherInfo data={weatherData}/>
+            </form> 
+          < WeatherInfo data={weatherData}/>
         < WeatherForecast coordinates={weatherData.coordinates} />
-           </div>
-           </div>
-           </div>
-          
+        </div>
+        </div>
+        </div>
+        
           ); 
   }else{
    search();

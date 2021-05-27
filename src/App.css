@@ -13,7 +13,7 @@ body {
 
 ul {
   position: relative;
-  left: 70%;
+  left: 60%;
   top: 20%;
   padding: 0 auto;
   margin: 0 auto;
@@ -26,7 +26,7 @@ ul {
   margin: 60px auto;
   padding: 15px;
   color: rgb(211, 201, 122);
-  height: 650px;
+  height: 550px;
   align-items: center;
 }
 .weather-side {
@@ -34,8 +34,8 @@ ul {
   height: 100%;
   border-radius: 25px;
   background-image: url(./images/sunnyday.jpg);
-  width: 650px;
-  align-items: center;
+  background-size: 300%;
+  width: 600px;
 }
 
 .weather-gradient {
@@ -62,29 +62,29 @@ ul {
 .Date {
   top: 10px;
   left: 10px;
-  font-size: 20px;
+  font-size: 30px;
   color: rgb(211, 201, 122);
 }
 .Hour {
   margin-top: 0;
   font: bold;
   font-weight: 10px;
-  font-size: 18px;
+  font-size: 25px;
   color: rgb(211, 201, 122);
 }
 
 .location {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
   padding-bottom: 0 auto;
-  font-size: 30px;
+  font-size: 35px;
   color: rgb(211, 201, 122);
 }
 
 .weather-des {
   font-size: 20px;
-  margin: 0 auto;
-  padding: 0 auto;
+  margin: 5px 0 auto;
+  padding: 5px 0 auto;
   color: rgb(211, 201, 122);
 }
 .weather-deg {
@@ -109,13 +109,13 @@ ul {
   color: rgb(211, 201, 122);
 }
 
-.weather-temp {
+.temperature {
   position: relative;
-  top: 40px;
+  top: 30px;
   margin-top: 10%;
-  padding: 0;
+  padding: 50px;
   font-weight: 250px;
-  font-size: 80px;
+  font-size: 70px;
   color: rgb(236, 224, 129);
 }
 
@@ -172,11 +172,6 @@ ul {
   text-decoration: none;
 }
 
-.weather-forecast {
-  margin-top: 20px;
-  text-align: center;
-  color: rgb(211, 201, 122);
-}
 .weather-forecast-date {
   font-size: 16px;
   opacity: 0.5px;

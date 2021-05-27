@@ -11,12 +11,19 @@ export default function FormattedDate(props){
     "Friday",
     "Saturday"
   ];
-  let day = days[props.date.getDay()];
+   let day = days[props.date.getDay()];
   
   return (
     <div>
     {day} 
     </div>
   );
+
+  
+
+  
 }
+
+ 
+
     
