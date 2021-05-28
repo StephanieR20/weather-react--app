@@ -21,7 +21,7 @@ export default function WeatherInfo(props){
        <span className="location" id="city">{props.data.city} </span>
        <h2 className="weather-des" id="description">{props.data.description}</h2>
               <span className="temperature" id="temperature" ><WeatherTemperature celsius={props.data.temperature} /> </span>
-             <div className="row row-cols-auto">
+             <div className="row">
                 <div className="col-4">
                   <ul class="percentage-speed">
                     <li>

@@ -29,7 +29,7 @@ export default function WeatherForecast(props) {
   if (loaded) {
     return (
       <div className="WeatherForecast">
-        <div className="row row-auto-col">
+        <div className="row">
           {forecast.map(function (dailyForecast, index) {
             if (index < 5) {
               return (

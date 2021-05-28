@@ -51,8 +51,8 @@ return (
     <div className="Weather">
       <div className="weather-side">
         <div className="weather-gradient"></div>
-        <div className="row row-cols-auto" ></div>
-        <div className="col">
+        <div className="row" ></div>
+        <div className="col-4">
             <form className="city-name" id="search-form" onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -68,11 +68,16 @@ return (
               </button>
             </form> 
           < WeatherInfo data={weatherData}/>
+          <div className="container">
+            < div className="row row-cols-xs">
+            <div className="col">
         < WeatherForecast coordinates={weatherData.coordinates} />
         </div>
         </div>
         </div>
-        
+        </div>
+        </div>
+        </div>
           ); 
   }else{
    search();
