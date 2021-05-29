@@ -22,11 +22,11 @@ export default function WeatherInfo(props){
        <h2 className="weather-des" id="description">{props.data.description}</h2>
               <span className="temperature" id="temperature" ><WeatherTemperature celsius={props.data.temperature} /> </span>
              <div className="row">
-                <div className="col-6">
+                <div className="col">
                   <ul class="percentage-speed">
                     <li>
                       Humidity:{" "}
-                      <span id="humidity">{props.data.humidity}%</span>%
+                      <span id="humidity">{props.data.humidity}%</span>
                     </li>
                     <li>
                       Wind: <span id="wind">{props.data.wind}</span> km/h

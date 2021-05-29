@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 
@@ -48,11 +48,11 @@ export default function Weather(props) {
 
  if (weatherData.ready){
 return (
-    <div className="Weather">
+    <div className="container-wrap">
       <div className="weather-side">
         <div className="weather-gradient"></div>
         <div className="row" ></div>
-        <div className="col-6">
+        <div className="col">
             <form className="city-name" id="search-form" onSubmit={handleSubmit}>
               <input
                 type="text"

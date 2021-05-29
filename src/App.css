@@ -1,5 +1,5 @@
 body {
-  margin: 60px 250px auto;
+  margin: 0;
   width: 100%;
   height: 100%;
   font-family: "Source Code Pro", monospace;
@@ -12,21 +12,21 @@ body {
 }
 
 ul {
-  position: relative;
+  position: absolute;
   left: 60%;
-  top: 20%;
+  top: 60%;
   padding: 0 auto;
   margin: 0 auto;
   list-style: none;
-  color: rgb(184, 172, 83);
+  color: rgb(201, 190, 109);
 }
 .container-wrap {
   max-width: 600px;
   border-radius: 25px;
-  margin: 60px auto;
+  margin: 30px auto;
   padding: 15px;
   color: rgb(211, 201, 122);
-  height: 550px;
+  height: 600px;
   align-items: center;
 }
 .weather-side {
@@ -34,8 +34,9 @@ ul {
   height: 100%;
   border-radius: 25px;
   background-image: url(./images/sunnyday.jpg);
-  background-size: 200%;
-  width: 550px;
+  background-size: 150%;
+  width: 600px;
+  align-items: center;
 }
 
 .weather-gradient {
@@ -75,6 +76,8 @@ ul {
 
 .location {
   text-align: center;
+  top: 20%;
+  left: 20%;
   margin-top: 15px;
   padding-bottom: 0 auto;
   font-size: 35px;
@@ -89,7 +92,7 @@ ul {
 }
 .weather-deg {
   position: relative;
-  top: 30px;
+  top: -35px;
   margin: 0;
   font-size: 25px;
   font-weight: 10px;
@@ -101,38 +104,35 @@ ul {
   top: 9%;
   right: -16%;
   transform: translate(-60%, -60%);
-  height: 25px;
-  padding: 8px;
-  margin-top: 8px;
+  height: 38px;
+  padding: 10px;
+  margin-top: 10px;
   border-radius: 40px;
   border-style: double;
   color: rgb(211, 201, 122);
 }
 
 .temperature {
-  position: relative;
-  top: 20px;
-  margin-top: 10%;
-  padding: 10%;
-  font-weight: 200px;
+  padding: 0;
+  margin: 0;
+  font-weight: 250;
   font-size: 80px;
-  color: rgb(236, 224, 129);
+  color: rgb(230, 215, 109);
 }
 
 .search-form {
-  text-align: left;
+  text-align: center;
   border: none;
-  color: rgb(211, 201, 122);
+  color: rgb(236, 222, 111);
   background: none;
   outline: none;
-  padding: 5px 25px 5px 5px;
-  margin: 5px 25px 5px 5px;
+  padding: 1px;
+  margin: 1px;
   font-weight: 17px;
   font-size: 17px;
   transition: 0.4s;
   line-height: 20px;
-  width: 100px;
-  height: 25%;
+  width: 150px;
 }
 .search-loop {
   position: absolute;
@@ -150,7 +150,7 @@ ul {
   align-items: center;
 }
 .city-name:hover {
-  width: 150px;
+  width: 200px;
   padding: 5px;
   margin: 5px;
   transition: 00.4s;
@@ -160,32 +160,17 @@ ul {
 }
 
 .weather-icon {
-  color: rgb(236, 224, 129);
+  color: rgb(236, 221, 106);
 }
 
 .weather-deg .active {
   color: rgb(236, 224, 129);
   cursor: default;
-}
-
-.weather-deg .active {
   text-decoration: none;
 }
 
-.weather-forecast-date {
-  font-size: 16px;
-  opacity: 0.5px;
-}
-.weather-forecast-temperature-min {
-  opacity: 0.5px;
-}
-.weather-forecast-temperature {
-  font-size: 13px;
-}
-.Weather canvas {
-  margin: 10px auto;
-}
 .App footer {
+  text-align: center;
   font-size: 11px;
-  margin: 10px 0;
+  margin: 10px auto;
 }

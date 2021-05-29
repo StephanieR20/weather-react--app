@@ -1,10 +1,25 @@
 .WeatherForecast {
   text-align: center;
-  margin-top: 0;
-  color: rgb(214, 202, 106);
+  margin-top: 0 auto;
+  margin-bottom: 10% auto;
+  color: rgb(209, 196, 95);
 }
 
 .WeatherForecast-temperature-min {
   opacity: 0.6;
   margin-left: 5px;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5px;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+.Weather canvas {
+  margin: 10px auto;
 }
