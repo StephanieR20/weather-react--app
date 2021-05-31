@@ -16,8 +16,8 @@ export default function WeatherInfo(props){
           < FormattedTime time= {props.data.time}/>
           </p>
     <div className="weather-icon">
-      < WeatherIcon code={props.data.icon} size={80}/>
-      <br/>
+     < WeatherIcon code={props.data.icon} size={80}/>
+       <br/>
        <span className="location" id="city">{props.data.city} </span>
        <h2 className="weather-des" id="description">{props.data.description}</h2>
               <span className="temperature" id="temperature" ><WeatherTemperature celsius={props.data.temperature} /> </span>
